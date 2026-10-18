@@ -1,0 +1,22 @@
+Evaluating run_image_moderation ---------------------------------------- 100% 0:00:00
+                                                                               Evaluation Summary: run_image_moderation                                                                                
+┌────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬────────────┐
+│ Case ID            │ Inputs                                                                          │ Outputs                                                                         │ Assertions │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ professional_image │ [ImageInput(image_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The image is a product shot of a power bank and related accessories. │ ✔✔✔✔       │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\professional_image.jpg')]                 │ It is well-lit, in focus, and does not contain any disturbing elements or       │            │
+│                    │                                                                                 │ personally identifiable information.' contains_pii=False is_disturbing=False    │            │
+│                    │                                                                                 │ is_low_quality=False                                                            │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ image_with_person  │ [ImageInput(image_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The image is appropriate for a professional customer service         │ ✗✗✔✔       │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\image_with_person.jpg')]                  │ setting. It does not contain any disturbing content, personally identifiable    │            │
+│                    │                                                                                 │ information, or low-quality elements.' contains_pii=False is_disturbing=False   │            │
+│                    │                                                                                 │ is_low_quality=False                                                            │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ low_quality_image  │ [ImageInput(image_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The image contains a hand, which is considered                       │ ✔✔✔✔       │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\low_quality_image.jpg')]                  │ personally-identifiable information (PII). The image is also slightly blurry,   │            │
+│                    │                                                                                 │ indicating low quality.' contains_pii=True is_disturbing=False                  │            │
+│                    │                                                                                 │ is_low_quality=True                                                             │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ Averages           │                                                                                 │                                                                                 │ 83.3% ✔    │
+└────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴────────────┘

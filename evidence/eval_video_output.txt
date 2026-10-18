@@ -1,0 +1,15 @@
+Evaluating run_video_moderation ---------------------------------------- 100% 0:00:00
+                                                                               Evaluation Summary: run_video_moderation                                                                                
+┌────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬────────────┐
+│ Case ID            │ Inputs                                                                          │ Outputs                                                                         │ Assertions │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ professional_video │ [VideoInput(video_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The video does not contain any PII, is not disturbing, and is of     │ ✔✔✔✔       │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\professional_video.mp4')]                 │ acceptable quality.' contains_pii=False is_disturbing=False                     │            │
+│                    │                                                                                 │ is_low_quality=False                                                            │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ video_with_face    │ [VideoInput(video_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The video shows a person, which is PII. The video quality is good    │ ✔✔✔✔       │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\video_with_face.mp4')]                    │ and it is not disturbing.' contains_pii=True is_disturbing=False                │            │
+│                    │                                                                                 │ is_low_quality=False                                                            │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ Averages           │                                                                                 │                                                                                 │ 100.0% ✔   │
+└────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴────────────┘

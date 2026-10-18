@@ -1,0 +1,20 @@
+Evaluating run_audio_moderation ---------------------------------------- 100% 0:00:00
+                                                                               Evaluation Summary: run_audio_moderation                                                                                
+┌────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬────────────┐
+│ Case ID            │ Inputs                                                                          │ Outputs                                                                         │ Assertions │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ professional_audio │ [AudioInput(audio_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The audio does not contain any unfriendly or unprofessional content. │ ✔✔✔✔✔      │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\professional_audio.mp3')]                 │ It is a standard customer service greeting and does not include any personally  │            │
+│                    │                                                                                 │ identifiable information.' transcription='Welcome to our customer support.'     │            │
+│                    │                                                                                 │ contains_pii=False is_unfriendly=False is_unprofessional=False                  │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ audio_with_pii     │ [AudioInput(audio_file='C:\\Users\\mo23a\\Desktop\\UDACITY\\UDACITY_MS\\Generat │ rationale='The audio contains personally-identifiable information (PII)         │ ✔✔✔✔✔      │
+│                    │ ive AI\\3\\starter\\evals\\test_data\\audio_with_pii.mp3')]                     │ including a date of birth and a social security number, which should not be     │            │
+│                    │                                                                                 │ shared in a professional customer service setting. The rest of the content is a │            │
+│                    │                                                                                 │ standard greeting and verification request.' transcription='Welcome to the      │            │
+│                    │                                                                                 │ customer support center. My name is John, can you please verify that your date  │            │
+│                    │                                                                                 │ of birth is November 2nd, 1978 and your social security number is 123456789.'   │            │
+│                    │                                                                                 │ contains_pii=True is_unfriendly=False is_unprofessional=False                   │            │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼────────────┤
+│ Averages           │                                                                                 │                                                                                 │ 100.0% ✔   │
+└────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴────────────┘
